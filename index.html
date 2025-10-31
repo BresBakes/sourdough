@@ -9,21 +9,31 @@
       font-family: 'Segoe UI', sans-serif;
       background: url('https://images.unsplash.com/photo-1606312617992-49ef9d0f9b30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1200') no-repeat center center fixed;
       background-size: cover;
-      color: #4b2e1e;
+      color: #fff8f0;
       text-align: center;
       padding: 40px 20px;
+      position: relative;
+    }
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.55); /* dark overlay for readability */
+      z-index: 0;
+    }
+    h1, p, .prices, .inclusions, .footer {
+      position: relative;
+      z-index: 1; /* make text appear above overlay */
     }
     h1 {
       font-size: 2.8em;
       margin-bottom: 10px;
-      color: #fff8f0;
-      text-shadow: 2px 2px 4px #6b3f2e;
+      text-shadow: 2px 2px 4px #000;
     }
     p {
       font-size: 1.1em;
       margin: 8px 0;
-      color: #fff8f0;
-      text-shadow: 1px 1px 3px #6b3f2e;
+      text-shadow: 1px 1px 3px #000;
     }
     .prices {
       margin: 20px 0;
@@ -42,7 +52,9 @@
       margin-top: 20px;
       font-weight: bold;
       font-size: 1.1em;
-      box-shadow: 2px 2px 6px #6b3f2e;
+      box-shadow: 2px 2px 6px #000;
+      position: relative;
+      z-index: 1;
     }
     .order-button:hover {
       background-color: #a9742f;
@@ -53,25 +65,27 @@
       flex-wrap: wrap;
       margin-top: 25px;
       gap: 15px;
+      position: relative;
+      z-index: 1;
     }
     .gallery img {
       width: 200px;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
-    .footer {
-      margin-top: 25px;
-      font-size: 0.9em;
-      color: #fff8f0;
-      text-shadow: 1px 1px 2px #6b3f2e;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     }
     .payments {
       margin-top: 20px;
+      position: relative;
+      z-index: 1;
     }
     .payments img {
       margin-top: 10px;
       width: 150px;
       height: 150px;
+    }
+    .footer {
+      margin-top: 25px;
+      font-size: 0.9em;
     }
   </style>
 </head>
@@ -83,9 +97,9 @@
     <p>With Inclusions – $11</p>
     <p class="inclusions">Inclusions: Jalapeño Cheddar, Chocolate Chip</p>
   </div>
-  <p>Payments accepted via Cash, Venmo, Cash App, or Zelle.</p>
+  <p>Payments accepted via Venmo, Cash App, or Zelle.</p>
 
-  <a class="order-button" href="mailto:bresbakesorders@gmail.com?subject=New Sourdough Order&body=Hi Bre! I’d like to order:%0A%0AType of loaf:%0AQuantity:%0AName:%0AContact info:%0A%0APayment method (Venmo/Cash App/Zelle):" target="_blank">
+  <a class="order-button" href="mailto:breannemshull@gmail.com?subject=New Sourdough Order&body=Hi Bre! I’d like to order:%0A%0AType of loaf:%0AQuantity:%0AName:%0AContact info:%0A%0APayment method (Venmo/Cash App/Zelle):" target="_blank">
     Place an Order
   </a>
 
@@ -98,10 +112,15 @@
   <div class="payments">
     <p>Venmo: <strong>@BreanneShull</strong></p>
     <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=venmo://paycharge?username=BreanneShull" alt="Venmo QR Code">
+
     <p>Cash App: <strong>$williamashull13</strong></p>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=cashapp://$williamashull13" alt="Cash App QR Code">
+
     <p>Zelle: <strong>720-224-6521</strong></p>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=tel:+17202246521" alt="Zelle QR Code">
   </div>
 
-  <p class="footer">Scan the Venmo QR code above or tap "Place an Order" to email your order. We’ll confirm your order and payment soon!</p>
+  <p class="footer">Scan any QR code above or tap "Place an Order" to email your order. We’ll confirm your order and payment soon!</p>
 </body>
 </html>
+
