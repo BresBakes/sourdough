@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bre’s Bakes</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff8f0;
+      color: #4b2e1e;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: #6b3f2e;
+    }
+    p {
+      font-size: 1.1em;
+      margin: 8px 0;
+    }
+    .prices {
+      margin: 20px 0;
+      font-weight: bold;
+    }
+    .inclusions {
+      font-style: italic;
+      color: #7a4f3e;
+    }
+    .order-button {
+      display: inline-block;
+      background-color: #c58940;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    .order-button:hover {
+      background-color: #a9742f;
+    }
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      gap: 15px;
+    }
+    .gallery img {
+      width: 200px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .footer {
+      margin-top: 25px;
+      font-size: 0.9em;
+      color: #555;
+    }
+    .venmo {
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bre’s Bakes</h1>
+  <p>Fresh homemade sourdough loaves baked locally with love.</p>
+  <div class="prices">
+    <p>Regular Loaf – $10</p>
+    <p>With Inclusions – $11</p>
+    <p class="inclusions">Inclusions: Jalapeño Cheddar, Chocolate Chip, Olive & Herb</p>
+  </div>
+  <p>Payments accepted via Venmo, Cash App, or Zelle.</p>
+
+  <a class="order-button" href="mailto:bresbakesorders@gmail.com?subject=New Sourdough Order&body=Hi Bre! I’d like to order:%0A%0AType of loaf:%0AQuantity:%0AName:%0AContact info:%0A%0APayment method (Venmo/Cash App/Zelle):" target="_blank">
+    Place an Order
+  </a>
+
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1606312617992-49ef9d0f9b30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8c291cmRvdWdofHx8fHx8MTY5ODQ4MjE4Nw&ixlib=rb-4.0.3&q=80&w=400" alt="Sourdough Loaf 1">
+    <img src="https://images.unsplash.com/photo-1606851096821-b3a2a11c44a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8c291cmRvdWdofHx8fHx8MTY5ODQ4MjE4Nw&ixlib=rb-4.0.3&q=80&w=400" alt="Sourdough Loaf 2">
+    <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4434f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8c291cmRvdWdofHx8fHx8MTY5ODQ4MjE4Nw&ixlib=rb-4.0.3&q=80&w=400" alt="Sourdough Loaf 3">
+  </div>
+
+  <div class="venmo">
+    <p>Venmo: <strong>@BreBakes</strong></p>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=venmo://paycharge?username=BreBakes" alt="Venmo QR Code">
+  </div>
+
+  <p class="footer">Scan the Venmo QR code above or tap "Place an Order" to email your order. We’ll confirm your order and payment soon!</p>
+</body>
+</html>
